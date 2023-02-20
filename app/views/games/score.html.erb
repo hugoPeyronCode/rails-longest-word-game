@@ -1,0 +1,18 @@
+<div class="container text-center mt-10">
+<h1>Score</h1>
+
+<ul class="list-group-horizontal">
+  <% @grid.each do |letter| %>
+    <li class="btn btn-dark"><%= letter %></li>
+  <% end %>
+</ul>
+
+<ul class = "list-group-vertical">
+  <li class="list-group-item list-group-item-primary" > <%= @result[:message]%> </li>
+  <li class="list-group-item list-group-item-info" ><%= "Your score: #{@result[:score]}"%></li>
+  <li class="list-group-item list-group-item-light"><%= "Your time: #{@result[:time]}"%></li>
+</ul>
+
+<%= link_to "Play again", new_path %>
+</div>
+
